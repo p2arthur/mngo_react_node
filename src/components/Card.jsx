@@ -13,11 +13,11 @@ function Card() {
         </div>
 
         <div className="bg-purple-900 rounded mt-3 shadow-inner pb-1">
-          <div className="font-bold transition-all shadow-lg hover:shadow-none cursor-pointer active:bg-purple-600 text-white w-full h-10 text-center mx-auto flex items-center  hover:-bt-1 justify-center rounded  bg-violet-600 hover:translate-y-1">
+          <div className="font-bold transition-all shadow-lg hover:shadow-none cursor-pointer active:bg-purple-700 text-white w-full h-10 text-center mx-auto flex items-center  hover:-bt-1 justify-center rounded  bg-violet-600 hover:translate-y-1">
             2500A
           </div>
         </div>
-        <div className=" mt-5 p-3 border-4 rounded border-violet-600 bg-violet-600 text-white flex justify-around shadow-inner">
+        <div className=" mt-5 p-3 border-4 transition-all border-violet-700 rounded hover:border-violet-800 bg-violet-700 text-white flex justify-around shadow-inner">
           <div className="border-2 border-yellow-400  rounded flex flex-col w-12 justify-center items-center py-1">
             <div>
               <MdSpeed />
