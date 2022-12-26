@@ -10,7 +10,7 @@ const mngoData = [
     price: 3500,
     level: 3,
     speed: false,
-    xp: true,
+    xp: 3,
   },
   {
     unity: "MNGO #29",
@@ -19,7 +19,7 @@ const mngoData = [
     price: 2500,
     level: 10,
     speed: true,
-    xp: true,
+    xp: 3,
   },
   {
     unity: "MNGO #938",
@@ -28,7 +28,7 @@ const mngoData = [
     price: 2500,
     level: 2,
     speed: true,
-    xp: true,
+    xp: 3,
   },
   {
     unity: "MNGO #938",
@@ -36,7 +36,7 @@ const mngoData = [
     price: 2500,
     level: 20,
     speed: true,
-    xp: true,
+    xp: 3,
   },
   {
     unity: "MNGO #938",
@@ -45,7 +45,7 @@ const mngoData = [
     price: 2500,
     level: 5,
     speed: true,
-    xp: true,
+    xp: 3,
   },
   {
     unity: "MNGO #938",
@@ -53,7 +53,7 @@ const mngoData = [
     price: 2500,
     level: 5,
     speed: true,
-    xp: true,
+    xp: 3,
   },
   {
     unity: "MNGO #06",
@@ -62,7 +62,7 @@ const mngoData = [
     price: 2300,
     level: 5,
     speed: true,
-    xp: true,
+    xp: 3,
   },
   {
     unity: "MNGO #01",
@@ -71,7 +71,7 @@ const mngoData = [
     price: 7500,
     level: 2,
     speed: true,
-    xp: true,
+    xp: 3,
   },
   {
     unity: "MNGO #938",
@@ -80,7 +80,7 @@ const mngoData = [
     price: 2500,
     level: 5,
     speed: true,
-    xp: true,
+    xp: 6,
   },
   {
     unity: "MNGO #938",
@@ -88,7 +88,7 @@ const mngoData = [
     price: 2500,
     level: 5,
     speed: true,
-    xp: true,
+    xp: 2,
   },
 ];
 
@@ -98,25 +98,32 @@ function FrenZonePage() {
     <Card key={index} data={object} />
   ));
   return (
-    <div className="flex flex-col min-h-screen items-center bg-cyan-50">
+    <div className>
       <NavigationBar />
-      <div className="mt-12 flex flex-col items-start justify-center px-10 space-y-10">
-        <div>
-          <h3 className="mt-10 text-3xl text-purple-400 font-extrabold">
-            BALANCE: <span className="text-orange-400">369🍤</span>
-          </h3>
-          <h2 className="text-5xl font-bold text-teal-400">THE FRENZONE</h2>
-          <h3 className="text-2xl text-purple-400 font-bold leading-6">
-            The Frenzone is a directory of Yieldlings and M.N.G.O listed on
-            secondary marketplaces that haven't dreamt their Mostly Frens.
-            Purchasing one of these berds will allow you to be the one to dream
-            their fren. Check the Directory to view Berds that are not listed.
-          </h3>
-        </div>
-        <div className="grid grid-row-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 ">
-          {RenderedCards}
+      <div className="flex flex-col min-h-screen items-center bg-cyan-50 text-xl 2xl:text-5xl my-10">
+        <div className="mt-12 flex flex-col items-start justify-center px-10 space-y-10">
+          <div>
+            <h3 className="mt- md:text-xl text-purple-400 font-extrabold text-2xl">
+              BALANCE:{" "}
+              <span className="text-orange-400 md:text-3xl text-sm">369🍤</span>
+            </h3>
+            <h2 className="md:text-5xl text-2xl font-bold text-teal-400">
+              THE FRENZONE
+            </h2>
+            <h3 className="md:text-2xl text-sm text-purple-400 font-bold lg:leading-6 leading-4">
+              The Frenzone is a directory of Yieldlings and M.N.G.O listed on
+              secondary marketplaces that haven't dreamt their Mostly Frens.
+              Purchasing one of these berds will allow you to be the one to
+              dream their fren. Check the Directory to view Berds that are not
+              listed.
+            </h3>
+          </div>
+          <div className="grid grid-row-2 xs sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 ">
+            {RenderedCards}
+          </div>
         </div>
       </div>
+      <div className="p-5 bg-black">Footer</div>
     </div>
   );
 }
