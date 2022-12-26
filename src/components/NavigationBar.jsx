@@ -3,20 +3,20 @@ import { IoWalletSharp } from "react-icons/io5";
 function NavigationBar() {
   return (
     <div className="relative">
-      <div className="bg-white border-b-2 border-gray-800 w-full p-3 flex md:space-x-52 lg:space-x-72 items-center justify-between md:justify-around fixed z-10">
+      <div className="bg-white font-thin flex justify-between w-screen p-3 items-center z-20 border-b-4 border-black fixed left-0">
         <img src="src/assets/mostlyFrens_logo.png" alt="" className="h-3" />
 
-        <button className="flex flex-col space-y-1 w-0 mr-5 sm:hidden">
+        <button className="flex flex-col space-y-1 mr-5 md:hidden">
           <div className="bg-black w-5 h-1 rounded-full"></div>
           <div className="bg-black w-5 h-1 rounded-full"></div>
           <div className="bg-black w-3 h-1 rounded-full"></div>
         </button>
 
-        <div className="space-x-5  sm:flex items-center hidden">
-          <div className="md:flex font-semibold  text-xs tracking-tight sm:space-x-3 ">
+        <div className="space-x-5  md:flex items-center hidden mr-5">
+          <div className="lg:flex font-semibold text-xs tracking-tight sm:space-x-3 border-b border-white">
             <a
               href="#"
-              className="hover:text-violet-800 hover:border-b-2 hover:border-b-violet-800 transition-all"
+              className="hover:text-violet-800 hover:border-b hover:border-b-violet-800 transition-all"
             >
               MY COLLECTION
             </a>
