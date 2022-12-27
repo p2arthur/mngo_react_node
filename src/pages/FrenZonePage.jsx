@@ -1,6 +1,7 @@
 import NavigationBar from "../components/NavigationBar";
 import Card from "../components/Card";
 import { useState } from "react";
+import Button from "../components/Button";
 
 const mngoData = [
   {
@@ -9,14 +10,15 @@ const mngoData = [
       "https://ipfs.algonft.tools/ipfs/QmU1Mtss6XhQ1KzSxTr1xA9N9Qu2txKZCW3inciUzhYrCh",
     price: 3500,
     level: 3,
-    speed: false,
+    speed: true,
     xp: 1,
+    forSale: true,
   },
   {
     unity: "MNGO #29",
     image:
       "https://ipfs.algonft.tools/ipfs/QmSw39jDwzcQWYX6ys2NDjrnxfEJz2f7g4niD7APXKqTNJ",
-    price: 2500,
+    price: 5000,
     level: 10,
     speed: true,
     xp: 3,
@@ -25,15 +27,16 @@ const mngoData = [
     unity: "MNGO #938",
     image:
       "https://ipfs.algonft.tools/ipfs/QmQeUnSCThJ2Lgmdzdx6dxhh9DyYBSWB7BNFhu78vK7j7N",
-    price: 2500,
+    price: 2690,
     level: 2,
     speed: true,
     xp: 3,
+    forSale: true,
   },
   {
     unity: "MNGO #938",
     image: "src/assets/mngo938.png",
-    price: 2500,
+    price: 4204,
     level: 20,
     speed: true,
     xp: 4,
@@ -46,6 +49,7 @@ const mngoData = [
     level: 5,
     speed: true,
     xp: 3,
+    forSale: true,
   },
   {
     unity: "MNGO #938",
@@ -63,6 +67,7 @@ const mngoData = [
     level: 5,
     speed: true,
     xp: 3,
+    forSale: false,
   },
   {
     unity: "MNGO #01",
@@ -72,6 +77,7 @@ const mngoData = [
     level: 2,
     speed: true,
     xp: 3,
+    forSale: true,
   },
   {
     unity: "MNGO #938",
@@ -89,6 +95,7 @@ const mngoData = [
     level: 5,
     speed: true,
     xp: 2,
+    forSale: false,
   },
 ];
 
@@ -98,7 +105,7 @@ function FrenZonePage() {
     <Card key={index} data={object} />
   ));
   return (
-    <div className>
+    <div>
       <div className="flex-col py-5 min-h-screen items-center bg-cyan-50 text-xl 2xl:text-5xl">
         <div className="flex flex-col items-center justify-start space-y-10 p-10">
           <div className="">
@@ -120,7 +127,7 @@ function FrenZonePage() {
             </h3>
           </div>
 
-          <div className="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 ">
+          <div className="grid 2xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 ">
             {RenderedCards}
           </div>
         </div>

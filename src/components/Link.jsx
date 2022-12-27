@@ -1,7 +1,7 @@
 import UseNavigationContext from "../hooks/use-navigation-context";
 
 function Link({ to, children, className }) {
-  const { navigate } = UseNavigationContext();
+  const { navigate, currentPath } = UseNavigationContext();
 
   const handleClick = (event) => {
     event.preventDefault();
@@ -11,7 +11,9 @@ function Link({ to, children, className }) {
 
   return (
     <a
-      className={`${className} cursor-pointer`}
+      className={`${className} cursor-pointer ${
+        currentPath === to ? "border-b border-b-black " : null
+      }`}
       onClick={handleClick}
       href={to}
     >
