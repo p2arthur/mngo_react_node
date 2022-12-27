@@ -4,12 +4,13 @@ import App from "./App";
 
 import "./app.css";
 
+import { Provider } from "./context/NavigationContext";
 const rootElement = document.getElementById("root");
 
 const root = ReactDOM.createRoot(rootElement);
 
 root.render(
-  <div>
-    <App></App>
-  </div>
+  <Provider>
+    <App />
+  </Provider>
 );
