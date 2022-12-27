@@ -10,7 +10,7 @@ const mngoData = [
     price: 3500,
     level: 3,
     speed: false,
-    xp: 3,
+    xp: 1,
   },
   {
     unity: "MNGO #29",
@@ -36,7 +36,7 @@ const mngoData = [
     price: 2500,
     level: 20,
     speed: true,
-    xp: 3,
+    xp: 4,
   },
   {
     unity: "MNGO #938",
@@ -53,7 +53,7 @@ const mngoData = [
     price: 2500,
     level: 5,
     speed: true,
-    xp: 3,
+    xp: 1,
   },
   {
     unity: "MNGO #06",
@@ -99,18 +99,19 @@ function FrenZonePage() {
   ));
   return (
     <div className>
-      <NavigationBar />
-      <div className="flex flex-col min-h-screen items-center bg-cyan-50 text-xl 2xl:text-5xl my-10">
-        <div className="mt-12 flex flex-col items-start justify-center px-10 space-y-10">
-          <div>
-            <h3 className="mt- md:text-xl text-purple-400 font-extrabold text-2xl">
+      <div className="flex-col py-5 min-h-screen items-center bg-cyan-50 text-xl 2xl:text-5xl">
+        <div className="flex flex-col items-center justify-start space-y-10 p-10">
+          <div className="">
+            <h3 className="md:text-xl text-purple-400 font-extrabold text-2xl">
               BALANCE:{" "}
-              <span className="text-orange-400 md:text-3xl text-sm">369🍤</span>
+              <span className="text-orange-400 md:text-3xl text-2xl">
+                369🍤
+              </span>
             </h3>
             <h2 className="md:text-5xl text-2xl font-bold text-teal-400">
               THE FRENZONE
             </h2>
-            <h3 className="md:text-2xl text-sm text-purple-400 font-bold lg:leading-6 leading-4">
+            <h3 className="md:text-2xl text-lg text-purple-400 font-bold lg:leading-6 leading-4">
               The Frenzone is a directory of Yieldlings and M.N.G.O listed on
               secondary marketplaces that haven't dreamt their Mostly Frens.
               Purchasing one of these berds will allow you to be the one to
@@ -118,12 +119,23 @@ function FrenZonePage() {
               listed.
             </h3>
           </div>
-          <div className="grid grid-row-2 xs sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 ">
+
+          <div className="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 ">
             {RenderedCards}
           </div>
         </div>
       </div>
-      <div className="p-5 bg-black">Footer</div>
+      <div className="p-5 bg-black text-white flex items-center justify-between">
+        <div className="flex flex-col items-center">
+          <img
+            src="src/assets/mostlyFrens_logo.png"
+            alt=""
+            className="bg-white rounded-full w-16"
+          />
+          mostly frens
+        </div>
+        All rights reserved
+      </div>
     </div>
   );
 }

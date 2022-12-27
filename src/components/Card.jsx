@@ -20,7 +20,7 @@ function Card({ data }) {
 
       <div className="h-50">
         <div className="bg-purple-900 rounded mt-3 pb-1">
-          <div className="font-bold transition-all shadow-lg hover:shadow-none text-lg cursor-pointer active:bg-purple-700 text-purple-600 w-full h-10 text-center mx-auto flex items-center hover:-bt-1 justify-center rounded  bg-white hover:translate-y-1">
+          <div className="font-bold hover:shadow-inner duration-75 shadow-lg  text-lg cursor-pointer active:bg-green-400 text-white w-full h-10 text-center mx-auto flex items-center hover:-bt-1 justify-center rounded  bg-sky-400 hover:bg-sky-500 hover:translate-y-1">
             {data.price}A
           </div>
         </div>
