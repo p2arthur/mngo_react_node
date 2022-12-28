@@ -3,6 +3,7 @@ import RafflesPage from "./pages/RafflesPage";
 import Router from "./components/Router";
 import NavigationBar from "./components/NavigationBar";
 import HomePage from "./pages/HomePage";
+import MyCollection from "./pages/MyCollectionPage";
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
         </Router>
         <Router pathName="/">
           <HomePage />
+        </Router>
+        <Router pathName="/mycollection">
+          <MyCollection />
         </Router>
       </div>
     </div>
