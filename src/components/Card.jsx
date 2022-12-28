@@ -1,9 +1,11 @@
 import { Children } from "react";
 import { MdSpeed } from "react-icons/md";
 import Button from "./Button";
+import ModalPage from "../pages/ModalPage";
 
-function Card({ data }) {
-  console.log(data.forSale);
+function Card({ data, onClick }) {
+  const setShowModal = ModalPage;
+  console.log(setShowModal.handleClick);
   return (
     <div className="relative px-3 py-1 bg-purple-600 lg:w-100  rounded-lg hover:shadow-2xl hover:scale-105 space-y-0 duration-100">
       <div className="shadow-lg rotate-12 py-8 px-3 rounded-full text-sm bg-green-500 absolute -right-5 -top-3 z-10 text-white">
@@ -21,7 +23,7 @@ function Card({ data }) {
         <img className="" src={data.image} alt="" />
       </div>
       {data.forSale ? (
-        <Button secondary data={data}>
+        <Button onClick={onClick} secondary data={data}>
           {data.price}A
         </Button>
       ) : (

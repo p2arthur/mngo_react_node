@@ -1,5 +1,14 @@
 import classNames from "classnames";
-function Button({ children, primary, secondary, inactive, sm, md, lg }) {
+function Button({
+  children,
+  primary,
+  secondary,
+  inactive,
+  sm,
+  md,
+  lg,
+  ...rest
+}) {
   const faceClassName = classNames(
     "font-bold select-none duration-75 shadow-lg border-4 border-white text-lg cursor-pointer  text-white w-full h-10 text-center mx-auto flex items-center justify-center rounded",
     {
@@ -11,13 +20,13 @@ function Button({ children, primary, secondary, inactive, sm, md, lg }) {
     }
   );
 
-  const sizeClass = classNames({ "w-full": lg });
-
-  console.log(sizeClass);
+  const sizeClass = classNames({ "w-full": lg, "w-36": md });
   return (
     <div>
-      <div className={`bg-purple-900 rounded pb-1 my-3`}>
-        <div className={`${faceClassName} ${sizeClass}`}>{children}</div>
+      <div className={` bg-purple-900 rounded pb-1 my-3 ${sizeClass}`}>
+        <button {...rest} className={`${faceClassName} ${sizeClass}`}>
+          {children}
+        </button>
       </div>
     </div>
   );

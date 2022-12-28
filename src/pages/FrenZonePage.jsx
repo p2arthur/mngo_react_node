@@ -2,6 +2,8 @@ import NavigationBar from "../components/NavigationBar";
 import Card from "../components/Card";
 import { useState } from "react";
 import Button from "../components/Button";
+import ModalPage from "./ModalPage";
+import Modal from "../components/Modal";
 
 const mngoData = [
   {
@@ -101,11 +103,39 @@ const mngoData = [
 
 function FrenZonePage() {
   const [data, setUpData] = useState(mngoData);
+  const [showModal, setShowModal] = useState(false);
+
+  const handleClose = () => setShowModal(false);
+
+  const actionBar = (
+    <div>
+      <Button onClick={handleClose} md secondary>
+        I accept
+      </Button>
+    </div>
+  );
+
+  const modalElement = (
+    <Modal onClose={handleClose} actionBar={actionBar}>
+      <p className="font-semibold">
+        Here's an important agreement for you to accept
+      </p>
+    </Modal>
+  );
+
+  const handleClick = () => {
+    setShowModal(true);
+    console.log("click2");
+  };
+
   const RenderedCards = data.map((object, index) => (
-    <Card key={index} data={object} />
+    <div>
+      <Card onClick={handleClick} key={index} data={object} />
+    </div>
   ));
   return (
     <div>
+      <div>{showModal ? modalElement : null}</div>
       <div className="flex-col py-5 min-h-screen items-center bg-cyan-50 text-xl 2xl:text-5xl">
         <div className="flex flex-col items-center justify-start space-y-10 p-10">
           <div className="">
