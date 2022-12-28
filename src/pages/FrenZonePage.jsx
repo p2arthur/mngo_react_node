@@ -134,7 +134,7 @@ function FrenZonePage() {
           />
           mostly frens
         </div>
-        All rights reserved
+        All rights reserveds
       </div>
     </div>
   );
