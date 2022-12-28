@@ -18,21 +18,15 @@ function App() {
         </Router>
 
         <Router pathName="/raffles">
-          <CardModalContainer>
-            <RafflesPage />
-          </CardModalContainer>
+          <RafflesPage />
         </Router>
 
         <Router pathName="/">
-          <CardModalContainer>
-            <HomePage />
-          </CardModalContainer>
+          <HomePage />
         </Router>
 
         <Router pathName="/mycollection">
-          <CardModalContainer>
-            <MyCollection />
-          </CardModalContainer>
+          <MyCollection />
         </Router>
       </div>
     </div>
