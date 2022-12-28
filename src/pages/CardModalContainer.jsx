@@ -11,11 +11,15 @@ function CardModalContainer(props) {
     setCardData(data);
     console.log("Open modal");
   }
+
+  function closeModal() {
+    setIsModalOpen(false);
+  }
   //BUG openModal prop returning undefined
   return (
     <div>
-      {isModalOpen && <CardModal cardData={cardData} />}
-      <CardList constt="x" openModal={openModal} />
+      {isModalOpen && <CardModal closeModal={closeModal} cardData={cardData} />}
+      <CardList closeModal={closeModal} openModal={openModal} />
     </div>
   );
 }
