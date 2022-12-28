@@ -7,6 +7,7 @@ function Button({
   sm,
   md,
   lg,
+  danger,
   ...rest
 }) {
   const faceClassName = classNames(
@@ -14,20 +15,30 @@ function Button({
     {
       "bg-purple-400 hover:bg-purple-500 active:bg-purple-600 active:translate-y-1 w-full":
         primary,
-      "bg-green-400 hover:bg-green-500 active:border-green-400 active:bg-green-600 active:translate-y-1":
+      "bg-green-500 hover:bg-green-600 active:border-green-400 active:bg-green-600 active:translate-y-1":
         secondary,
-      "bg-gray-400 active:-translate-y-0.5 active:border-red-200": inactive,
+      "bg-gray-400 active:-translate-y-0.5 active:border-red-200 shadow-3xl":
+        inactive,
+      "bg-red-400 hover:bg-red-500 active:border-red-400 active:bg-red-600 active:translate-y-1":
+        danger,
     }
   );
 
-  const sizeClass = classNames({ "w-full": lg, "w-36": md });
+  const sizeClass = classNames({
+    "w-full": lg,
+    "w-36": md,
+    "w-24 text-xs md:w-24 md:text-lg xl:w-36 xl:text-3xl": sm,
+  });
   return (
-    <div>
-      <div className={` bg-purple-900 rounded pb-1 my-3 ${sizeClass}`}>
-        <button {...rest} className={`${faceClassName} ${sizeClass}`}>
-          {children}
-        </button>
-      </div>
+    <div
+      className={` bg-purple-900 rounded pb-1 ${sizeClass} ${rest.className}`}
+    >
+      <button
+        {...rest}
+        className={`${faceClassName} ${sizeClass} ${rest.className} `}
+      >
+        {children}
+      </button>
     </div>
   );
 }
