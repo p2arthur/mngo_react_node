@@ -27,7 +27,7 @@ function Button({
   const sizeClass = classNames({
     "w-full": lg,
     "w-36": md,
-    "w-24 text-xs md:w-24 md:text-lg xl:w-36 xl:text-3xl": sm,
+    "w-24 text-xs md:w-24 md:text-lg xl:w-26 xl:text-1xl": sm,
   });
   return (
     <div

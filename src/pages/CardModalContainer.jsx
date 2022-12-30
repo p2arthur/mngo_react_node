@@ -17,7 +17,7 @@ function CardModalContainer(props) {
   }
   //BUG openModal prop returning undefined
   return (
-    <div>
+    <div className="bg-red-400 h-0">
       {isModalOpen && <CardModal closeModal={closeModal} cardData={cardData} />}
       <CardList closeModal={closeModal} openModal={openModal} />
     </div>
